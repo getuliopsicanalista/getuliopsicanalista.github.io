@@ -248,6 +248,7 @@
 
   /* ===================== SEÇÕES GERAIS ===================== */
   section{padding:88px 0;}
+  #contato{padding:0;margin:0;background:var(--deep);}
   section.dim{background:var(--paper);}
   .section-head{max-width:600px;margin-bottom:48px;}
   .section-head h2{font-size:clamp(1.9rem,3.2vw,2.7rem);}
@@ -289,8 +290,10 @@
   }
 
   /* AGENDAR / CONTATO — fechamento */
-  .close-section{background:var(--deep);color:var(--foam);position:relative;overflow:hidden;padding:100px 0 96px;}
+  .close-section{background:var(--deep);color:var(--foam);position:relative;overflow:hidden;padding:100px 0 96px;border:0;}
   .close-section .wrap{position:relative;z-index:2;max-width:600px;text-align:center;}
+  .close-wave{position:absolute;left:0;right:0;bottom:0;width:100%;z-index:1;line-height:0;opacity:.85;}
+  .close-wave svg{width:100%;height:auto;display:block;}
   .close-section h2{color:var(--foam);font-size:clamp(2rem,3.4vw,2.7rem);}
   .close-section p.lede{color:var(--mist);font-size:1.08rem;margin-bottom:2.2em;max-width:42ch;margin-left:auto;margin-right:auto;}
   .close-section .btn-primary{padding:17px 36px;font-size:1rem;margin-bottom:2.6em;}
@@ -303,7 +306,7 @@
   .close-dl dd{margin:0;font-size:.92rem;color:var(--mist);}
 
   /* FOOTER */
-  footer.site{background:var(--deep);color:var(--mist);padding:40px 0 26px;border-top:1px solid var(--line-deep);}
+  footer.site{background:var(--deep);color:var(--mist);padding:40px 0 26px;border-top:1px solid rgba(140,176,190,.35);}
   .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
   .footer-row .logotype{color:var(--foam);}
   .footer-links{display:flex;gap:24px;flex-wrap:wrap;font-size:.86rem;}
@@ -482,24 +485,16 @@
     </div>
   </section>
 
-  <!-- ===================== CITAÇÃO — MOMENTO DE IMPACTO ===================== -->
-  <section class="quote-section">
-    <div class="mountains-watermark" aria-hidden="true">
-      <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <defs><filter id="bleed4" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter></defs>
-        <path filter="url(#bleed4)" fill="#8CB0BE" fill-opacity="0.18"
-          d="M0,120 C160,80 260,140 360,100 C460,62 540,120 660,90 C780,62 860,120 980,95 C1080,72 1180,120 1440,88 L1440,200 L0,200 Z"/>
-      </svg>
-    </div>
-    <div class="wrap">
-      <p class="eyebrow">Uma prática</p>
-      <blockquote>“O que insiste em se repetir merece ser escutado.”</blockquote>
-    </div>
-  </section>
-
   <!-- ===================== AGENDAR / CONTATO — FECHAMENTO ===================== -->
   <section id="contato">
     <div class="close-section">
+      <div class="close-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><filter id="bleed-close" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter></defs>
+          <path filter="url(#bleed-close)" fill="#8CB0BE" fill-opacity="0.18"
+            d="M0,120 C160,80 260,140 360,100 C460,62 540,120 660,90 C780,62 860,120 980,95 C1080,72 1180,120 1440,88 L1440,200 L0,200 Z"/>
+        </svg>
+      </div>
       <div class="wrap">
         <p class="eyebrow">Agendar sessão</p>
         <h2>Pronto para começar?</h2>
@@ -512,7 +507,7 @@
           <div><dt>Online</dt><dd>Todo o Brasil</dd></div>
         </dl>
       </div>
-    </div>
+</div>
   </section>
 
 </main>
