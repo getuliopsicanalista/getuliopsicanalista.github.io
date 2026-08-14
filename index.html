@@ -207,6 +207,7 @@
   .btn-primary{
     font-size:.95rem;font-weight:600;color:var(--deep);background:var(--foam);
     padding:13px 26px;text-decoration:none;transition:background .2s;
+    display:inline-block;
   }
   .btn-primary:hover{background:var(--mist);}
   .btn-link{
@@ -292,33 +293,17 @@
   .cta-band p{color:var(--mist);font-size:1.05rem;margin-bottom:2em;}
   .cta-band .btn-primary{padding:15px 34px;}
 
-  /* CONTATO */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
-  .contact-info dl{display:grid;grid-template-columns:120px 1fr;gap:14px 16px;font-size:.95rem;margin:1.6em 0 2em;}
-  .contact-info dt{font-family:var(--font-mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;
-    color:var(--sky);padding-top:2px;}
-  .map-frame{
-    aspect-ratio:16/10;border:1px dashed var(--line);background:var(--paper);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;
-    padding:24px;color:var(--mid);margin-top:32px;
+  /* CONTATO (Novo CSS Centralizado) */
+  .contact-centered { max-width: 600px; margin: 0 auto; text-align: center; }
+  .contact-centered dl { 
+    display: grid; grid-template-columns: 110px 1fr; gap: 14px 16px; 
+    font-size: .95rem; margin: 2.5em auto; text-align: left; 
+    background: var(--paper); padding: 32px; border: 1px solid var(--line); 
   }
-  .map-frame .ph-label{font-family:var(--font-mono);font-size:.68rem;color:var(--sky);max-width:30ch;}
-
-  form.contact-form{display:grid;gap:16px;}
-  form.contact-form label{display:block;font-family:var(--font-mono);font-size:.68rem;text-transform:uppercase;
-    letter-spacing:.05em;color:var(--tide);margin-bottom:6px;}
-  form.contact-form input, form.contact-form textarea{
-    width:100%;background:var(--paper);border:1px solid var(--line);
-    padding:12px 14px;font-family:var(--font-body);font-size:.95rem;color:var(--ink);
+  .contact-centered dt { 
+    font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; 
+    letter-spacing: .05em; color: var(--sky); padding-top: 2px; 
   }
-  section.dim form.contact-form input, section.dim form.contact-form textarea{background:var(--foam);}
-  form.contact-form textarea{resize:vertical;min-height:110px;}
-  form.contact-form button{
-    justify-self:start;font-size:.9rem;font-weight:600;
-    background:var(--deep);color:var(--foam);border:1px solid var(--deep);padding:13px 28px;cursor:pointer;
-  }
-  form.contact-form button:hover{background:transparent;color:var(--deep);}
-  .form-note{font-size:.78rem;opacity:.65;margin-top:-4px;}
 
   /* FOOTER — simples, sem colunas repetidas */
   footer.site{background:var(--deep);color:var(--mist);padding:48px 0 28px;}
@@ -338,9 +323,8 @@
   /* ===================== RESPONSIVO ===================== */
   @media (max-width:960px){
     .hero .wrap{grid-template-columns:1fr;}
-    .about-grid, .contact-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;}
     .modalities{grid-template-columns:1fr;}
-    .testimonials{grid-template-columns:1fr;}
   }
   @media (max-width:860px){
     nav.primary ul, .schedule-link{display:none;}
@@ -355,7 +339,7 @@
     section{padding:68px 0;}
     .hero{padding:72px 0 0;}
     .credentials li{grid-template-columns:1fr;}
-    .contact-info dl{grid-template-columns:1fr;}
+    .contact-centered dl{grid-template-columns:1fr; padding: 24px;}
     .footer-row{flex-direction:column;align-items:flex-start;}
   }
 </style>
@@ -391,7 +375,7 @@
         <h1>Um espaço de escuta para <em>se ouvir</em></h1>
         <p class="lede">Getúlio Tecchio é psicanalista há 10 anos. Atende presencialmente em São Roque – SP e, por videochamada, pacientes de todo o Brasil.</p>
         <div class="hero-ctas">
-          <a class="btn-primary" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+          <a class="btn-primary" href="https://wa.me/5511996491978?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
           <a class="btn-link" href="#sobre">Conhecer o trabalho</a>
         </div>
         <div class="trust-row">
@@ -521,7 +505,7 @@
       <p class="eyebrow">Agendar sessão</p>
       <h2>Pronto para começar a se ouvir?</h2>
       <p>Escreva contando um pouco do que te trouxe até aqui, ou chame diretamente pelo WhatsApp para marcar sua primeira sessão.</p>
-      <a class="btn-primary" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      <a class="btn-primary" href="https://wa.me/5511996491978?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
     </div>
     <div class="mountains-cta" aria-hidden="true">
       <svg viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -536,47 +520,23 @@
     </div>
   </section>
 
-  <!-- ===================== CONTATO ===================== -->
+  <!-- ===================== CONTATO (Atualizado) ===================== -->
   <section id="contato">
-    <div class="wrap contact-grid">
-      <div class="contact-info">
-        <p class="eyebrow">Contato</p>
-        <h2>Fale com Getúlio</h2>
-        <p>Tire dúvidas antes da primeira sessão ou combine o melhor horário.</p>
-        <dl>
-          <dt>Nome</dt><dd>Getúlio Tecchio — Psicanalista</dd>
-          <dt>Endereço</dt><dd>[Preencher: Rua, número — Bairro], São Roque – SP</dd>
-          <dt>Telefone</dt><dd>[Preencher: (11) 00000-0000]</dd>
-          <dt>E-mail</dt><dd>[Preencher: contato@getuliotecchio.com.br]</dd>
-          <dt>Horários</dt><dd>[Preencher: seg. a sex., 9h às 19h]</dd>
-        </dl>
-        <a class="btn-link" href="https://wa.me/5511999999999" target="_blank" rel="noopener" style="color:var(--tide);border-color:var(--tide);">Chamar no WhatsApp</a>
-        <div class="map-frame">
-          <span class="ph-label">Insira aqui o embed do Google Maps com a localização exata do consultório em São Roque – SP (isso reforça o SEO local e ajuda pacientes a chegarem até você).</span>
-        </div>
-      </div>
-      <div class="contact-form-wrap">
-        <form class="contact-form" action="mailto:contato@getuliotecchio.com.br" method="post" enctype="text/plain">
-          <div>
-            <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" required>
-          </div>
-          <div>
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" required>
-          </div>
-          <div>
-            <label for="telefone">Telefone / WhatsApp</label>
-            <input id="telefone" name="telefone" type="tel">
-          </div>
-          <div>
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-          </div>
-          <button type="submit">Enviar mensagem</button>
-          <p class="form-note">Este formulário usa envio simples por e-mail. Para maior confiabilidade, conecte-o a um serviço como Formspree, EmailJS ou similar.</p>
-        </form>
-      </div>
+    <div class="wrap contact-centered">
+      <p class="eyebrow">Contato</p>
+      <h2>Fale com Getúlio</h2>
+      <p>Tire dúvidas antes da primeira sessão ou combine o melhor horário diretamente pelo WhatsApp.</p>
+      
+      <dl>
+        <dt>Psicanalista</dt><dd>Getúlio Tecchio</dd>
+        <dt>Atendimento</dt><dd>Online para todo o Brasil e presencial em São Roque – SP</dd>
+        <dt>E-mail</dt><dd>[Preencher: seu-email-real@aqui.com]</dd>
+        <dt>Horários</dt><dd>Seg. a Sex., 09h às 19h</dd>
+      </dl>
+      
+      <a class="btn-primary" href="https://wa.me/5511996491978" target="_blank" rel="noopener">
+        Chamar no WhatsApp
+      </a>
     </div>
   </section>
 
@@ -591,7 +551,7 @@
         <a href="#sobre">Sobre</a>
         <a href="#atendimento">Atendimento</a>
         <a href="#contato">Contato</a>
-        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/5511996491978" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
     <div class="footer-bottom">
