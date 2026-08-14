@@ -13,29 +13,29 @@
 <meta name="language" content="pt-BR">
 <meta name="geo.placename" content="São Roque, São Paulo, Brasil">
 <meta name="geo.region" content="BR-SP">
-<link rel="canonical" href="https://www.getuliotecchio.com.br/">
+<link rel="canonical" href="https://getuliopsicanalista.github.io/">
 
 <!-- ===================== OPEN GRAPH / SOCIAL ===================== -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Getúlio Tecchio Psicanalista">
 <meta property="og:title" content="Getúlio Tecchio | Psicanalista em São Roque - SP">
 <meta property="og:description" content="10 anos de experiência em escuta psicanalítica. Atendimento presencial em São Roque – SP e online para todo o Brasil.">
-<meta property="og:url" content="https://www.getuliotecchio.com.br/">
+<meta property="og:url" content="https://getuliopsicanalista.github.io/">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://www.getuliotecchio.com.br/images/getulio-tecchio-psicanalista-og.jpg">
+<meta property="og:image" content="https://getuliopsicanalista.github.io/images/getulio-tecchio-psicanalista-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Getúlio Tecchio | Psicanalista em São Roque - SP">
 <meta name="twitter:description" content="Atendimento presencial em São Roque – SP e terapia online para todo o Brasil. 10 anos de experiência.">
 
-<!-- ===================== FAVICON ===================== -->
+<!-- ===================== FAVICON (placeholder) ===================== -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23123247%22/><text x=%2250%22 y=%2264%22 font-size=%2240%22 fill=%22%23F5FAFB%22 font-family=%22Georgia,serif%22 text-anchor=%22middle%22>GT</text></svg>">
 
 <!-- ===================== FONTES ===================== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- ===================== DADOS ESTRUTURADOS ===================== -->
+<!-- ===================== DADOS ESTRUTURADOS (SCHEMA.ORG) ===================== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,6 +47,7 @@
       "image": "https://getuliopsicanalista.github.io/images/getulio-tecchio-psicanalista.jpg",
       "url": "https://getuliopsicanalista.github.io/",
       "telephone": "+55-11-99649-1978",
+      "email": "getulio.psicanalista@gmail.com",
       "priceRange": "$$",
       "description": "Atendimento psicanalítico presencial em São Roque - SP e terapia online para todo o Brasil. 10 anos de experiência clínica.",
       "address": {
@@ -60,6 +61,7 @@
         { "@type": "AdministrativeArea", "name": "São Paulo" },
         { "@type": "Country", "name": "Brasil" }
       ],
+      "openingHours": "Mo-Fr 09:00-19:00",
       "founder": { "@id": "https://getuliopsicanalista.github.io/#pessoa" },
       "sameAs": [
         "https://www.instagram.com/getulio_psicanalista/"
@@ -80,13 +82,13 @@
 </script>
 
 <style>
-  /* ===================== TOKENS ===================== */
+  /* ===================== TOKENS — mar, céu, névoa ===================== */
   :root{
     --ink:#16232B;
-    --deep:#123247;
+    --deep:#0E2B3E;
     --mid:#2C5B76;
     --tide:#2F7A82;
-    --sky:#7FA0B0;
+    --sky:#8CB0BE;
     --mist:#CFE0E6;
     --foam:#F5FAFB;
     --paper:#EAF2F5;
@@ -106,7 +108,7 @@
     color:var(--ink);
     font-family:var(--font-body);
     font-size:16.5px;
-    line-height:1.7;
+    line-height:1.65;
     -webkit-font-smoothing:antialiased;
   }
   img{max-width:100%;display:block;}
@@ -114,7 +116,7 @@
   h1,h2,h3{
     font-family:var(--font-display);
     font-weight:600;
-    line-height:1.15;
+    line-height:1.08;
     margin:0 0 .5em;
     letter-spacing:0;
   }
@@ -122,7 +124,7 @@
   .eyebrow{
     font-family:var(--font-mono);
     font-size:.72rem;
-    letter-spacing:.1em;
+    letter-spacing:.12em;
     text-transform:uppercase;
     color:var(--tide);
     margin-bottom:1em;
@@ -142,10 +144,9 @@
   }
   @keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
 
-  /* ===================== ONDA ===================== */
+  /* ===================== ONDA — divisor de seção ===================== */
   .wave-divider{width:100%;height:22px;display:block;}
-  .wave-divider.light{color:var(--sky);opacity:.55;}
-  .wave-divider.deep{color:var(--foam);opacity:.5;}
+  .wave-divider.light{color:var(--sky);opacity:.6;}
 
   /* ===================== HEADER ===================== */
   header.site{
@@ -175,51 +176,52 @@
   }
   nav.primary a:hover{color:var(--tide);border-color:var(--tide);}
   .schedule-link{
-    font-size:.94rem;color:var(--tide);text-decoration:none;font-weight:600;
+    font-size:.94rem;color:var(--tide);text-decoration:none;font-weight:700;
     border-bottom:1px solid var(--tide);padding-bottom:2px;white-space:nowrap;
   }
   .schedule-link:hover{opacity:.7;}
 
-  .nav-toggle{
-    display:none;background:none;border:none;color:var(--ink);cursor:pointer;
-    padding:6px;
-  }
+  .nav-toggle{display:none;background:none;border:none;color:var(--ink);cursor:pointer;padding:6px;}
   .nav-toggle span{display:block;width:20px;height:1px;background:var(--ink);margin:5px 0;}
 
   /* ===================== HERO ===================== */
   .hero{
     background:var(--deep);color:var(--foam);
     position:relative;overflow:hidden;
-    padding:96px 0 0;
+    padding:88px 0 0;
   }
   .hero .wrap{
     display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;
-    position:relative;z-index:3;padding-bottom:64px;
+    position:relative;z-index:3;padding-bottom:70px;
   }
   .hero h1{
-    font-size:clamp(2.2rem, 4vw, 3.3rem);max-width:13ch;color:var(--foam);
+    font-size:clamp(2.6rem, 5.4vw, 4.2rem);max-width:11ch;color:var(--foam);
+    margin-bottom:.32em;
   }
   .hero p.lede{
-    font-size:1.08rem;max-width:46ch;color:var(--mist);margin-bottom:1.8em;
+    font-size:1.12rem;max-width:42ch;color:var(--mist);margin-bottom:2em;
   }
-  .hero-ctas{display:flex;gap:22px;flex-wrap:wrap;align-items:center;margin-bottom:2.6em;}
+  .hero-ctas{display:flex;gap:24px;flex-wrap:wrap;align-items:center;margin-bottom:2.8em;}
   .btn-primary{
-    font-size:.95rem;font-weight:600;color:var(--deep);background:var(--foam);
-    padding:13px 26px;text-decoration:none;transition:background .2s;
+    font-size:.95rem;font-weight:700;letter-spacing:.01em;color:var(--deep);background:var(--foam);
+    padding:16px 32px;text-decoration:none;transition:background .2s, transform .2s;
     display:inline-block;
   }
-  .btn-primary:hover{background:var(--mist);}
+  .btn-primary:hover{background:var(--mist);transform:translateY(-1px);}
   .btn-link{
     font-size:.95rem;color:var(--foam);text-decoration:none;
     border-bottom:1px solid var(--sky);padding-bottom:2px;
   }
   .btn-link:hover{border-color:var(--foam);}
-  .trust-row{
-    display:flex;gap:32px;flex-wrap:wrap;font-size:.86rem;color:var(--sky);
-    border-top:1px solid var(--line-deep);padding-top:20px;
+
+  .stat-bar{display:flex;flex-wrap:wrap;gap:20px;border-top:1px solid var(--line-deep);padding-top:26px;}
+  .stat{flex:1;min-width:130px;}
+  .stat .num{
+    font-family:var(--font-display);font-size:clamp(1.8rem,2.6vw,2.5rem);font-weight:700;
+    color:var(--foam);line-height:1;display:block;margin-bottom:8px;
   }
-  .trust-row strong{color:var(--foam);font-family:var(--font-display);font-size:1.1rem;
-    display:block;font-weight:600;}
+  .stat .label{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--sky);}
 
   .portrait-frame{
     aspect-ratio:4/5;
@@ -235,88 +237,81 @@
   }
   .portrait-frame .ph-tag{
     position:absolute;top:12px;left:12px;
-    font-family:var(--font-mono);font-size:.62rem;color:var(--foam);letter-spacing:.06em;
-    opacity:.7;
+    font-family:var(--font-mono);font-size:.62rem;color:var(--foam);letter-spacing:.06em;opacity:.7;
   }
 
   /* ===================== MONTANHAS EM AQUARELA ===================== */
-  .mountains{
-    position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;z-index:1;
-    line-height:0;
-  }
+  .mountains{position:absolute;left:0;right:0;bottom:0;width:100%;z-index:1;line-height:0;}
   .mountains svg{width:100%;height:auto;display:block;}
-  .mountains-cta{position:absolute;left:0;right:0;bottom:0;width:100%;z-index:1;opacity:.9;line-height:0;}
-  .mountains-cta svg{width:100%;height:auto;display:block;}
+  .mountains-watermark{position:absolute;left:0;right:0;bottom:0;width:100%;z-index:1;opacity:.5;line-height:0;}
+  .mountains-watermark svg{width:100%;height:auto;display:block;}
 
   /* ===================== SEÇÕES GERAIS ===================== */
-  section{padding:96px 0;}
+  section{padding:88px 0;}
   section.dim{background:var(--paper);}
-  .section-head{max-width:620px;margin-bottom:52px;}
-  .section-head h2{font-size:clamp(1.7rem,2.6vw,2.3rem);}
-  .section-head p{font-size:1.02rem;opacity:.82;max-width:56ch;}
+  .section-head{max-width:600px;margin-bottom:48px;}
+  .section-head h2{font-size:clamp(1.9rem,3.2vw,2.7rem);}
+  .section-head p{font-size:1.02rem;opacity:.82;max-width:52ch;}
 
   /* SOBRE */
   .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start;}
-  .about-photo .portrait-frame{
-    border-color:var(--line);background:rgba(18,50,71,.03);
-  }
+  .about-photo .portrait-frame{border-color:var(--line);background:rgba(18,50,71,.03);}
   .about-photo .portrait-frame .icon{color:var(--tide);}
   .about-photo .portrait-frame .ph-label{color:var(--mid);}
   .about-photo .portrait-frame .ph-tag{color:var(--tide);opacity:1;}
-  .about-body p{margin:0 0 1.2em;font-size:1.02rem;}
+  .about-body p{margin:0 0 1.3em;font-size:1.12rem;max-width:46ch;}
   .credentials{list-style:none;margin:1.8em 0 0;padding:1.6em 0 0;border-top:1px solid var(--line);
     display:grid;gap:14px;}
   .credentials li{display:grid;grid-template-columns:130px 1fr;gap:16px;font-size:.95rem;}
   .credentials li span.label{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.05em;
     text-transform:uppercase;color:var(--tide);padding-top:2px;}
   .chip-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.6em;}
-  .chip{
-    font-size:.82rem;border:1px solid var(--line);padding:7px 14px;color:var(--mid);
-    background:rgba(47,122,130,.05);
-  }
+  .chip{font-size:.82rem;border:1px solid var(--line);padding:7px 14px;color:var(--mid);
+    background:rgba(47,122,130,.05);}
 
   /* ATENDIMENTO */
-  .modalities{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
-    border:1px solid var(--line);}
+  .modalities{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
   .modality{background:var(--foam);padding:44px 38px;}
   section.dim .modality{background:var(--paper);}
-  .modality h3{font-size:1.4rem;margin-bottom:.4em;}
-  .modality p{font-size:.96rem;opacity:.82;margin-bottom:1.4em;}
+  .modality h3{font-size:1.55rem;margin-bottom:.35em;}
+  .modality p{font-size:.98rem;opacity:.82;margin-bottom:1.3em;}
   .modality ul{margin:0;padding-left:1.15em;font-size:.93rem;}
-  .modality li{margin-bottom:.55em;}
+  .modality li{margin-bottom:.5em;}
 
-  /* CONTATO E AGENDAMENTO (UNIFICADO) */
-  .contact-band { background: var(--deep); color: var(--foam); position: relative; overflow: hidden; padding: 88px 0 100px; }
-  .contact-band .wrap { position: relative; z-index: 2; text-align: center; max-width: 640px; margin: 0 auto; }
-  .contact-band h2 { color: var(--foam); font-size: clamp(1.8rem,3vw,2.4rem); }
-  .contact-band p.desc { color: var(--mist); font-size: 1.05rem; margin-bottom: 2em; }
-  
-  .contact-info { 
-    display: grid; grid-template-columns: 110px 1fr; gap: 14px 16px; 
-    font-size: .95rem; margin: 0 auto 2.5em; text-align: left; 
-    background: rgba(245, 250, 251, 0.04); padding: 32px; 
-    border: 1px dashed var(--line-deep); color: var(--foam);
+  /* CITAÇÃO — momento de impacto */
+  .quote-section{background:var(--deep);color:var(--foam);position:relative;overflow:hidden;
+    padding:110px 0;text-align:center;}
+  .quote-section .wrap{position:relative;z-index:2;max-width:840px;}
+  .quote-section .eyebrow{justify-content:center;color:var(--sky);}
+  .quote-section blockquote{
+    font-family:var(--font-display);font-style:italic;font-weight:600;
+    font-size:clamp(1.9rem,4.4vw,3.2rem);line-height:1.22;margin:0;color:var(--foam);
   }
-  .contact-info dt { 
-    font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; 
-    letter-spacing: .05em; color: var(--sky); padding-top: 2px; 
+
+  /* AGENDAR / CONTATO — fechamento */
+  .close-section{background:var(--deep);color:var(--foam);position:relative;overflow:hidden;padding:100px 0 96px;}
+  .close-section .wrap{position:relative;z-index:2;max-width:600px;text-align:center;}
+  .close-section h2{color:var(--foam);font-size:clamp(2rem,3.4vw,2.7rem);}
+  .close-section p.lede{color:var(--mist);font-size:1.08rem;margin-bottom:2.2em;max-width:42ch;margin-left:auto;margin-right:auto;}
+  .close-section .btn-primary{padding:17px 36px;font-size:1rem;margin-bottom:2.6em;}
+  .close-dl{
+    display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;text-align:left;
+    border-top:1px solid var(--line-deep);padding-top:28px;max-width:480px;margin:0 auto;
   }
-  .contact-info dd { margin: 0; }
-  .contact-band .btn-primary { padding: 15px 34px; }
+  .close-dl dt{font-family:var(--font-mono);font-size:.65rem;text-transform:uppercase;letter-spacing:.05em;
+    color:var(--sky);margin-bottom:4px;}
+  .close-dl dd{margin:0;font-size:.92rem;color:var(--mist);}
 
   /* FOOTER */
-  footer.site{background:var(--deep);color:var(--mist);padding:48px 0 28px;}
-  .footer-row{
-    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
-    padding-bottom:28px;border-bottom:1px solid var(--line-deep);
-  }
+  footer.site{background:var(--deep);color:var(--mist);padding:40px 0 26px;border-top:1px solid var(--line-deep);}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
   .footer-row .logotype{color:var(--foam);}
-  .footer-links{display:flex;gap:24px;flex-wrap:wrap;font-size:.88rem;}
+  .footer-links{display:flex;gap:24px;flex-wrap:wrap;font-size:.86rem;}
   .footer-links a{text-decoration:none;opacity:.85;}
   .footer-links a:hover{opacity:1;color:var(--foam);}
   .footer-bottom{
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
-    padding-top:22px;font-family:var(--font-mono);font-size:.72rem;opacity:.6;
+    font-family:var(--font-mono);font-size:.7rem;opacity:.55;margin-top:22px;
+    padding-top:20px;border-top:1px solid var(--line-deep);
   }
 
   /* ===================== RESPONSIVO ===================== */
@@ -324,6 +319,7 @@
     .hero .wrap{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .modalities{grid-template-columns:1fr;}
+    .close-dl{grid-template-columns:1fr;}
   }
   @media (max-width:860px){
     nav.primary ul, .schedule-link{display:none;}
@@ -335,10 +331,10 @@
     nav.primary.open{align-items:flex-start;}
   }
   @media (max-width:600px){
-    section{padding:68px 0;}
-    .hero{padding:72px 0 0;}
+    section{padding:64px 0;}
+    .hero{padding:64px 0 0;}
+    .quote-section, .close-section{padding:76px 0;}
     .credentials li{grid-template-columns:1fr;}
-    .contact-info{grid-template-columns:1fr; padding: 24px;}
     .footer-row{flex-direction:column;align-items:flex-start;}
   }
 </style>
@@ -371,16 +367,16 @@
     <div class="wrap fade-up">
       <div class="hero-copy">
         <p class="eyebrow">Psicanalista · São Roque, SP</p>
-        <h1>Um espaço de escuta para <em>se ouvir</em></h1>
-        <p class="lede">Getúlio Tecchio é psicanalista há 10 anos. Atende presencialmente em São Roque – SP e, por videochamada, pacientes de todo o Brasil.</p>
+        <h1>Espaço para <em>se ouvir</em>.</h1>
+        <p class="lede">Psicanálise há 10 anos. Presencial em São Roque – SP e online para todo o Brasil.</p>
         <div class="hero-ctas">
           <a class="btn-primary" href="https://wa.me/5511996491978?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
           <a class="btn-link" href="#sobre">Conhecer o trabalho</a>
         </div>
-        <div class="trust-row">
-          <div><strong>10 anos</strong>de escuta clínica</div>
-          <div><strong>São Roque, SP</strong>atendimento presencial</div>
-          <div><strong>Brasil inteiro</strong>atendimento 100% online</div>
+        <div class="stat-bar">
+          <div class="stat"><span class="num">10</span><span class="label">Anos de experiência</span></div>
+          <div class="stat"><span class="num">São Roque</span><span class="label">Atendimento presencial</span></div>
+          <div class="stat"><span class="num">Brasil</span><span class="label">Atendimento online</span></div>
         </div>
       </div>
       <div class="hero-photo">
@@ -392,23 +388,19 @@
       </div>
     </div>
 
-    <!-- Montanhas -->
+    <!-- Montanhas em aquarela, estilo shan-shui, em tons de azul do mar -->
     <div class="mountains" aria-hidden="true">
-      <svg viewBox="0 0 1440 280" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <filter id="bleed1" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="7"/>
-          </filter>
-          <filter id="bleed2" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="4"/>
-          </filter>
+          <filter id="bleed1" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"/></filter>
+          <filter id="bleed2" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
         </defs>
-        <path filter="url(#bleed1)" fill="#7FA0B0" fill-opacity="0.35"
-          d="M0,140 C120,90 200,150 260,110 C330,65 380,120 460,95 C540,70 590,130 680,100 C760,75 820,140 900,105 C980,70 1040,130 1120,100 C1200,72 1280,120 1440,90 L1440,280 L0,280 Z"/>
-        <path filter="url(#bleed1)" fill="#2C5B76" fill-opacity="0.45"
-          d="M0,190 C100,150 180,205 250,175 C330,140 400,195 480,165 C560,135 620,190 700,165 C790,135 850,195 940,170 C1020,145 1090,195 1160,170 C1250,140 1330,190 1440,160 L1440,280 L0,280 Z"/>
-        <path filter="url(#bleed2)" fill="#123247" fill-opacity="0.85"
-          d="M0,230 C90,205 160,240 230,220 C310,195 370,235 450,215 C540,192 600,235 690,215 C780,193 840,235 930,218 C1020,198 1080,235 1170,218 C1260,198 1340,232 1440,212 L1440,280 L0,280 Z"/>
+        <path filter="url(#bleed1)" fill="#8CB0BE" fill-opacity="0.4"
+          d="M0,150 C120,95 200,160 260,118 C330,70 380,128 460,100 C540,74 590,138 680,106 C760,80 820,148 900,112 C980,74 1040,138 1120,106 C1200,76 1280,128 1440,96 L1440,300 L0,300 Z"/>
+        <path filter="url(#bleed1)" fill="#2C5B76" fill-opacity="0.5"
+          d="M0,204 C100,160 180,218 250,186 C330,148 400,206 480,174 C560,142 620,202 700,174 C790,142 850,206 940,180 C1020,152 1090,206 1160,180 C1250,148 1330,202 1440,170 L1440,300 L0,300 Z"/>
+        <path filter="url(#bleed2)" fill="#0E2B3E" fill-opacity="0.9"
+          d="M0,246 C90,218 160,256 230,234 C310,206 370,250 450,228 C540,203 600,250 690,228 C780,204 840,250 930,231 C1020,209 1080,250 1170,231 C1260,209 1340,247 1440,225 L1440,300 L0,300 Z"/>
       </svg>
     </div>
   </section>
@@ -433,13 +425,12 @@
       <div class="about-body">
         <p class="eyebrow">Sobre</p>
         <h2>Getúlio Tecchio</h2>
-        <p>Há 10 anos, Getúlio Tecchio se dedica à escuta psicanalítica, acompanhando pessoas em momentos de dúvida, sofrimento e transformação. Seu trabalho parte da ideia central da psicanálise: que aquilo que mais nos incomoda costuma carregar um sentido que ainda não conseguimos formular sozinhos.</p>
-        <p>Atende em consultório físico em São Roque – SP e, por videochamada, pacientes de qualquer cidade do Brasil — mantendo em ambos os formatos o mesmo cuidado, sigilo e rigor clínico.</p>
+        <p>Há 10 anos, Getúlio acompanha pessoas a escutar o que insiste em se repetir — e ainda não encontrou palavra.</p>
         <ul class="credentials">
-          <li><span class="label">Experiência</span><span>10 anos de prática clínica em psicanálise</span></li>
-          <li><span class="label">Formação</span><span>[Preencher: instituto/escola de formação em psicanálise]</span></li>
-          <li><span class="label">Orientação</span><span>[Preencher: linha teórica — ex. freudiana, lacaniana]</span></li>
-          <li><span class="label">Atendimento</span><span>Presencial em São Roque – SP · Online para todo o Brasil</span></li>
+          <li><span class="label">Experiência</span><span>10 anos de prática clínica</span></li>
+          <li><span class="label">Formação</span><span>[Preencher: instituto/escola de formação]</span></li>
+          <li><span class="label">Orientação</span><span>[Preencher: linha teórica]</span></li>
+          <li><span class="label">Atendimento</span><span>São Roque – SP · Online, Brasil todo</span></li>
         </ul>
         <div class="chip-list" aria-label="Temas trabalhados em consulta">
           <span class="chip">Ansiedade</span>
@@ -464,67 +455,63 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Onde atendo</p>
-        <h2>Presencial em São Roque ou online, em qualquer lugar do Brasil</h2>
+        <h2>São Roque, presencial. Brasil, online.</h2>
       </div>
       <div class="modalities">
         <div class="modality">
           <p class="eyebrow">Presencial</p>
-          <h3>Consultório em São Roque – SP</h3>
-          <p>Atendimento em consultório físico, para quem prefere o encontro presencial ou reside na região de São Roque e cidades vizinhas.</p>
+          <h3>Consultório em São Roque</h3>
+          <p>Para quem busca o encontro presencial na região.</p>
           <ul>
-            <li>Sessões de 50 minutos, presenciais</li>
+            <li>Sessões de uma hora</li>
             <li>Ambiente reservado e silencioso</li>
-            <li>Fácil acesso, [preencher: referência de bairro/estacionamento]</li>
+            <li>Próximo ao Recanto da Cascata</li>
           </ul>
         </div>
         <div class="modality">
           <p class="eyebrow">Online</p>
-          <h3>Terapia online para todo o Brasil</h3>
-          <p>Sessões por videochamada, com a mesma estrutura e frequência do atendimento presencial — para quem mora fora de São Roque ou prefere a comodidade de casa.</p>
+          <h3>Terapia em todo o Brasil</h3>
+          <p>Sessões por vídeo, para qualquer cidade do país.</p>
           <ul>
-            <li>Sessões de 50 minutos, por vídeo</li>
-            <li>Atende todos os estados do Brasil</li>
-            <li>Mesmo sigilo e cuidado clínico do presencial</li>
+            <li>Sessões de uma hora</li>
+            <li>Atende todo o Brasil</li>
+            <li>Mesmo sigilo do presencial</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <svg class="wave-divider light" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true">
-    <defs><pattern id="wave3" width="60" height="24" patternUnits="userSpaceOnUse">
-      <path d="M0 12 Q15 2 30 12 T60 12" fill="none" stroke="currentColor" stroke-width="1.6"/>
-    </pattern></defs>
-    <rect width="1200" height="24" fill="url(#wave3)"/>
-  </svg>
-
-  <!-- ===================== CONTATO E AGENDAMENTO (UNIFICADO) ===================== -->
-  <section class="contact-band" id="contato">
-    <div class="wrap">
-      <p class="eyebrow">Agendar sessão & Contato</p>
-      <h2>Pronto para começar a se ouvir?</h2>
-      <p class="desc">Escreva contando um pouco do que te trouxe até aqui ou tire dúvidas antes da primeira sessão. Marque seu horário diretamente pelo WhatsApp.</p>
-      
-      <dl class="contact-info">
-        <dt>Psicanalista</dt><dd>Getúlio Tecchio</dd>
-        <dt>Atendimento</dt><dd>Online (todo o Brasil) e Presencial (São Roque – SP)</dd>
-        <dt>E-mail</dt><dd>[getulio.psicanalista@gmail.com]</dd>
-        <dt>Horários</dt><dd>Seg. a Sex., 09h às 19h</dd>
-      </dl>
-      
-      <a class="btn-primary" href="https://wa.me/5511996491978?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
-    </div>
-    
-    <div class="mountains-cta" aria-hidden="true">
-      <svg viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <filter id="bleed3" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="5"/>
-          </filter>
-        </defs>
-        <path filter="url(#bleed3)" fill="#7FA0B0" fill-opacity="0.25"
-          d="M0,90 C140,60 240,110 340,80 C440,50 520,100 640,75 C760,50 840,100 960,78 C1080,55 1180,100 1440,70 L1440,160 L0,160 Z"/>
+  <!-- ===================== CITAÇÃO — MOMENTO DE IMPACTO ===================== -->
+  <section class="quote-section">
+    <div class="mountains-watermark" aria-hidden="true">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs><filter id="bleed4" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter></defs>
+        <path filter="url(#bleed4)" fill="#8CB0BE" fill-opacity="0.18"
+          d="M0,120 C160,80 260,140 360,100 C460,62 540,120 660,90 C780,62 860,120 980,95 C1080,72 1180,120 1440,88 L1440,200 L0,200 Z"/>
       </svg>
+    </div>
+    <div class="wrap">
+      <p class="eyebrow">Uma prática</p>
+      <blockquote>“O que insiste em se repetir merece ser escutado.”</blockquote>
+    </div>
+  </section>
+
+  <!-- ===================== AGENDAR / CONTATO — FECHAMENTO ===================== -->
+  <section id="contato">
+    <div class="close-section">
+      <div class="wrap">
+        <p class="eyebrow">Agendar sessão</p>
+        <h2>Pronto para começar?</h2>
+        <p class="lede">Combine o melhor horário direto pelo WhatsApp.</p>
+        <a class="btn-primary" href="https://wa.me/5511996491978?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <dl class="close-dl">
+          <div><dt>E-mail</dt><dd>getulio.psicanalista@gmail.com</dd></div>
+          <div><dt>Horários</dt><dd>Seg. a sex., 9h às 19h</dd></div>
+          <div><dt>Presencial</dt><dd>São Roque – SP</dd></div>
+          <div><dt>Online</dt><dd>Todo o Brasil</dd></div>
+        </dl>
+      </div>
     </div>
   </section>
 
@@ -543,7 +530,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="ano"></span> Getúlio Tecchio Psicanalista · São Roque, SP · Atendimento em todo o Brasil</span>
+      © <span id="ano"></span> Getúlio Tecchio Psicanalista · São Roque, SP · Atendimento em todo o Brasil
     </div>
   </div>
 </footer>
