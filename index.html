@@ -248,7 +248,6 @@
 
   /* ===================== SEÇÕES GERAIS ===================== */
   section{padding:88px 0;}
-  #contato{padding:0;margin:0;background:var(--deep);}
   section.dim{background:var(--paper);}
   .section-head{max-width:600px;margin-bottom:48px;}
   .section-head h2{font-size:clamp(1.9rem,3.2vw,2.7rem);}
@@ -292,6 +291,8 @@
   /* AGENDAR / CONTATO — fechamento */
   .close-section{background:var(--deep);color:var(--foam);position:relative;overflow:hidden;padding:100px 0 96px;border:0;}
   .close-section .wrap{position:relative;z-index:2;max-width:600px;text-align:center;}
+  .schedule-wave{position:absolute;left:0;right:0;bottom:0;height:24px;color:var(--sky);opacity:.28;line-height:0;z-index:1;}
+  .schedule-wave svg{width:100%;height:24px;display:block;}
   .close-wave{position:absolute;left:0;right:0;bottom:0;width:100%;z-index:1;line-height:0;opacity:.85;}
   .close-wave svg{width:100%;height:auto;display:block;}
   .close-section h2{color:var(--foam);font-size:clamp(2rem,3.4vw,2.7rem);}
@@ -340,6 +341,109 @@
     .credentials li{grid-template-columns:1fr;}
     .footer-row{flex-direction:column;align-items:flex-start;}
   }
+
+  /* Correção: contato e footer ficam encostados, sem nenhuma faixa branca */
+  #contato{padding:0 !important;background:var(--deep) !important;margin:0 !important;}
+  #contato .close-section{margin:0 !important;border:0 !important;border-bottom:1px solid rgba(140,176,190,.45) !important;}
+  footer.site{margin:0 !important;border-top:0 !important;}
+
+
+  .close-section::after{
+    content:"";
+    position:absolute;
+    left:0; right:0; bottom:0;
+    height:24px;
+    opacity:.28;
+    pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24' preserveAspectRatio='none'%3E%3Cpath d='M0 12 Q15 2 30 12 T60 12 T120 12' fill='none' stroke='%238CB0BE' stroke-width='1.6'/%3E%3C/svg%3E");
+    background-size:120px 24px;
+    background-repeat:repeat-x;
+    background-position:bottom;
+  }
+
+
+  /* ===================== REFINO DE CONTEÚDO E MOBILE ===================== */
+  .hero-copy .lede{max-width:46ch;}
+  .about-body p{max-width:50ch;}
+  .about-meta{
+    display:flex;flex-wrap:wrap;gap:8px 22px;
+    margin-top:2em;padding-top:1.3em;border-top:1px solid var(--line);
+    color:var(--mid);font-family:var(--font-mono);font-size:.68rem;
+    letter-spacing:.035em;text-transform:uppercase;
+  }
+  .about-meta span{position:relative;}
+  .about-meta span + span::before{
+    content:"";position:absolute;left:-12px;top:50%;width:3px;height:3px;
+    border-radius:50%;background:var(--sky);transform:translateY(-50%);
+  }
+  .modalities{border:0;background:var(--line);gap:1px;}
+  .modality{min-height:190px;}
+  .modality p:last-child{max-width:42ch;}
+  .close-section{min-height:0;}
+  .close-dl{grid-template-columns:1fr 1fr;}
+  .footer-links a{opacity:.72;}
+
+  @media (max-width:860px){
+    .nav-row{padding:16px 20px;}
+    .logotype{font-size:1.12rem;}
+    .logotype .role{display:none;}
+    nav.primary.open ul{
+      top:61px;padding:18px 20px 22px;gap:0;
+      box-shadow:0 8px 20px rgba(14,43,62,.08);
+    }
+    nav.primary.open li a{
+      display:block;padding:11px 0;font-size:1rem;
+      border-bottom:1px solid var(--line);
+    }
+    nav.primary.open li:last-child a{border-bottom:0;}
+  }
+
+  @media (max-width:600px){
+    body{font-size:16px;}
+    .wrap{padding:0 20px;}
+    section{padding:58px 0;}
+    .hero{padding:58px 0 0;}
+    .hero .wrap{gap:38px;padding-bottom:48px;}
+    .hero h1{font-size:clamp(2.55rem,13vw,3.5rem);max-width:10ch;}
+    .hero p.lede{font-size:1rem;line-height:1.6;margin-bottom:1.6em;}
+    .hero-ctas{gap:16px;margin-bottom:2.1em;}
+    .btn-primary{width:100%;text-align:center;padding:15px 20px;}
+    .btn-link{display:inline-block;margin-left:2px;}
+    .stat-bar{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px;padding-top:20px;}
+    .stat:last-child{grid-column:1 / -1;}
+    .stat .num{font-size:1.75rem;}
+    .stat .label{font-size:.62rem;}
+    .hero-photo{order:2;}
+    .portrait-frame{aspect-ratio:4/3;min-height:260px;}
+
+    .section-head{margin-bottom:32px;}
+    .section-head h2{font-size:2rem;}
+    .section-head p{font-size:.98rem;}
+
+    .about-grid{gap:34px;}
+    .about-body h2{font-size:2rem;}
+    .about-body p{font-size:1rem;max-width:none;}
+    .about-meta{display:grid;gap:10px;margin-top:1.5em;}
+    .about-meta span + span::before{display:none;}
+
+    .modalities{grid-template-columns:1fr;gap:1px;}
+    .modality{padding:30px 24px;min-height:0;}
+    .modality h3{font-size:1.4rem;}
+
+    .quote-section{padding:64px 0;}
+    .quote-section blockquote{font-size:2rem;}
+
+    .close-section{padding:68px 0 58px;}
+    .close-section h2{font-size:2.25rem;}
+    .close-section p.lede{font-size:1rem;margin-bottom:1.8em;}
+    .close-dl{grid-template-columns:1fr;gap:16px;padding-top:22px;}
+
+    footer.site{padding:30px 0 20px;}
+    .footer-row{gap:16px;}
+    .footer-links{gap:16px;font-size:.82rem;}
+    .footer-bottom{margin-top:18px;padding-top:16px;font-size:.62rem;}
+  }
+
 </style>
 </head>
 <body>
@@ -371,15 +475,15 @@
       <div class="hero-copy">
         <p class="eyebrow">Psicanalista · São Roque, SP</p>
         <h1>Espaço para <em>se ouvir</em>.</h1>
-        <p class="lede">Psicanálise há 10 anos. Presencial em São Roque – SP e online para todo o Brasil.</p>
+        <p class="lede">Às vezes, aquilo que incomoda ainda não encontrou palavras. A psicanálise pode ser um espaço para olhar com mais calma para o que você está vivendo.</p>
         <div class="hero-ctas">
-          <a class="btn-primary" href="https://wa.me/5511996491978?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+          <a class="btn-primary" href="https://wa.me/5511996491978?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noopener">Conversar sobre uma sessão</a>
           <a class="btn-link" href="#sobre">Conhecer o trabalho</a>
         </div>
         <div class="stat-bar">
-          <div class="stat"><span class="num">10</span><span class="label">Anos de experiência</span></div>
-          <div class="stat"><span class="num">São Roque</span><span class="label">Atendimento presencial</span></div>
-          <div class="stat"><span class="num">Brasil</span><span class="label">Atendimento online</span></div>
+          <div class="stat"><span class="num">10</span><span class="label">anos de experiência clínica</span></div>
+          <div class="stat"><span class="num">São Roque</span><span class="label">atendimento presencial</span></div>
+          <div class="stat"><span class="num">Online</span><span class="label">para todo o Brasil</span></div>
         </div>
       </div>
       <div class="hero-photo">
@@ -427,20 +531,13 @@
       </div>
       <div class="about-body">
         <p class="eyebrow">Sobre</p>
-        <h2>Getúlio Tecchio</h2>
-        <p>Há 10 anos, Getúlio acompanha pessoas a escutar o que insiste em se repetir — e ainda não encontrou palavra.</p>
-        <ul class="credentials">
-          <li><span class="label">Experiência</span><span>10 anos de prática clínica</span></li>
-          <li><span class="label">Formação</span><span>[Preencher: instituto/escola de formação]</span></li>
-          <li><span class="label">Orientação</span><span>[Preencher: linha teórica]</span></li>
-          <li><span class="label">Atendimento</span><span>São Roque – SP · Online, Brasil todo</span></li>
-        </ul>
-        <div class="chip-list" aria-label="Temas trabalhados em consulta">
-          <span class="chip">Ansiedade</span>
-          <span class="chip">Luto</span>
-          <span class="chip">Relacionamentos</span>
-          <span class="chip">Autoconhecimento</span>
-          <span class="chip">Crises existenciais</span>
+        <h2>Um espaço para falar sem precisar ter tudo organizado.</h2>
+        <p>O trabalho começa pela palavra: pelas dúvidas, incômodos, conflitos e acontecimentos que às vezes parecem difíceis de compreender sozinho.</p>
+        <p>A partir da escuta psicanalítica, construímos um espaço para investigar aquilo que está acontecendo — no seu tempo e sem respostas prontas.</p>
+        <div class="about-meta">
+          <span>10 anos de experiência clínica</span>
+          <span>São Roque – SP</span>
+          <span>Atendimento presencial e online</span>
         </div>
       </div>
     </div>
@@ -457,57 +554,39 @@
   <section class="dim" id="atendimento">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Onde atendo</p>
-        <h2>São Roque, presencial. Brasil, online.</h2>
+        <p class="eyebrow">Atendimento</p>
+        <h2>Um encontro presencial ou à distância.</h2>
+        <p>O formato muda, mas a proposta permanece: um espaço regular de escuta, com privacidade e tempo para elaborar o que importa.</p>
       </div>
       <div class="modalities">
         <div class="modality">
           <p class="eyebrow">Presencial</p>
-          <h3>Consultório em São Roque</h3>
-          <p>Para quem busca o encontro presencial na região.</p>
-          <ul>
-            <li>Sessões de uma hora</li>
-            <li>Ambiente reservado e silencioso</li>
-            <li>Próximo ao Recanto da Cascata</li>
-          </ul>
+          <h3>São Roque – SP</h3>
+          <p>Atendimento em consultório, com horário previamente combinado.</p>
         </div>
         <div class="modality">
           <p class="eyebrow">Online</p>
-          <h3>Terapia em todo o Brasil</h3>
-          <p>Sessões por vídeo, para qualquer cidade do país.</p>
-          <ul>
-            <li>Sessões de uma hora</li>
-            <li>Atende todo o Brasil</li>
-            <li>Mesmo sigilo do presencial</li>
-          </ul>
+          <h3>Todo o Brasil</h3>
+          <p>Sessões por videochamada, com a mesma privacidade e regularidade do atendimento presencial.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===================== AGENDAR / CONTATO — FECHAMENTO ===================== -->
-  <section id="contato">
+  <section id="contato" style="padding:0; background:var(--deep);">
     <div class="close-section">
-      <div class="close-wave" aria-hidden="true">
-        <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <defs><filter id="bleed-close" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter></defs>
-          <path filter="url(#bleed-close)" fill="#8CB0BE" fill-opacity="0.18"
-            d="M0,120 C160,80 260,140 360,100 C460,62 540,120 660,90 C780,62 860,120 980,95 C1080,72 1180,120 1440,88 L1440,200 L0,200 Z"/>
-        </svg>
-      </div>
       <div class="wrap">
-        <p class="eyebrow">Agendar sessão</p>
-        <h2>Pronto para começar?</h2>
-        <p class="lede">Combine o melhor horário direto pelo WhatsApp.</p>
-        <a class="btn-primary" href="https://wa.me/5511996491978?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <p class="eyebrow">Contato</p>
+        <h2>Vamos conversar.</h2>
+        <p class="lede">Se você sente que gostaria de começar um processo, entre em contato para conversarmos sobre horários e funcionamento.</p>
+        <a class="btn-primary" href="https://wa.me/5511996491978?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre uma sess%C3%A3o" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
         <dl class="close-dl">
-          <div><dt>E-mail</dt><dd>getulio.psicanalista@gmail.com</dd></div>
+          <div><dt>Atendimento</dt><dd>São Roque · Online para todo o Brasil</dd></div>
           <div><dt>Horários</dt><dd>Seg. a sex., 9h às 19h</dd></div>
-          <div><dt>Presencial</dt><dd>São Roque – SP</dd></div>
-          <div><dt>Online</dt><dd>Todo o Brasil</dd></div>
         </dl>
       </div>
-</div>
+    </div>
   </section>
 
 </main>
@@ -521,11 +600,10 @@
         <a href="#sobre">Sobre</a>
         <a href="#atendimento">Atendimento</a>
         <a href="#contato">Contato</a>
-        <a href="https://wa.me/5511996491978" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
     <div class="footer-bottom">
-      © <span id="ano"></span> Getúlio Tecchio Psicanalista · São Roque, SP · Atendimento em todo o Brasil
+      © <span id="ano"></span> Getúlio Tecchio · São Roque, SP
     </div>
   </div>
 </footer>
